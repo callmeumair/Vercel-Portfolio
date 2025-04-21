@@ -200,7 +200,7 @@ export default function Home() {
                   title="PulseFit.AI"
                   description="A cutting-edge fitness app designed to revolutionize the way you approach your fitness journey using Artificial Intelligence."
                   tags={["JavaScript", "AI", "Fitness"]}
-                  imageUrl="/placeholder.svg?height=250&width=500"
+                  imageUrl="https://media.licdn.com/dms/image/v2/D4D0BAQFHOrC-kRyzBQ/company-logo_100_100/B4DZYqljnUHIAU-/0/1744471211124?e=1750896000&v=beta&t=U9ZkRXvK_9m5y_Wf0So8LKQ34ebsHPr8OPB4dq0PLhw"
                   githubUrl="https://github.com/callmeumair/PulseFit.AI"
                   liveUrl="https://pulsefitai.vercel.app/"
                   index={0}
