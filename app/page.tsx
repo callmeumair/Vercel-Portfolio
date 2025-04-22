@@ -209,7 +209,7 @@ export default function Home() {
                   title="Web3"
                   description="A Web3 project exploring blockchain technologies and decentralized applications."
                   tags={["TypeScript", "Web3", "Blockchain"]}
-                  imageUrl="/placeholder.svg?height=250&width=500"
+                  imageUrl="https://www.google.com/imgres?q=web3%20dapps%20logo&imgurl=https%3A%2F%2Fchainstack.com%2Fwp-content%2Fuploads%2F2022%2F12%2Fweb3-dapps.png&imgrefurl=https%3A%2F%2Fchainstack.com%2Fdapps%2F&docid=HOjHHesIPgcP-M&tbnid=dSrk0ghyZEj8wM&vet=12ahUKEwjQr4ec9eqMAxXtxzgGHWxHD8EQM3oECBkQAA..i&w=2550&h=1350&hcb=2&ved=2ahUKEwjQr4ec9eqMAxXtxzgGHWxHD8EQM3oECBkQAA"
                   githubUrl="https://github.com/callmeumair/web3"
                   liveUrl="https://web3-app1.vercel.app/"
                   index={1}
@@ -218,7 +218,7 @@ export default function Home() {
                   title="AI Agent"
                   description="An intelligent AI agent built with TypeScript for automated tasks and assistance."
                   tags={["TypeScript", "AI", "Automation"]}
-                  imageUrl="/placeholder.svg?height=250&width=500"
+                  imageUrl="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Fwhat-heck-ai-agents-why-should-i-care-uma-gupta-7dbye&psig=AOvVaw3QYLN14faqW8rmyKaHGVhK&ust=1745386463177000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJiYgLf16owDFQAAAAAdAAAAABAJ"
                   githubUrl="https://github.com/callmeumair/ai-agent"
                   liveUrl="https://ai-agent-6ucn.vercel.app/"
                   index={2}
@@ -227,7 +227,7 @@ export default function Home() {
                   title="Social Media App"
                   description="A full-stack social media platform that allows users to post updates, follow other users, and engage in real-time chat. Built using the MERN stack."
                   tags={["JavaScript", "MERN", "Real-time"]}
-                  imageUrl="/placeholder.svg?height=250&width=500"
+                  imageUrl="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdribbble.com%2Ftags%2Fsocial-media-logo&psig=AOvVaw3IReIdJvRErGJJWk10ic9M&ust=1745386522729000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMial9f16owDFQAAAAAdAAAAABAE"
                   githubUrl="https://github.com/callmeumair/Social-Media-App"
                   liveUrl="#"
                   index={3}
@@ -236,7 +236,7 @@ export default function Home() {
                   title="E-Commerce"
                   description="A full-stack e-commerce platform designed to showcase my skills as a Full Stack Web Developer. Includes user authentication, product management, and a seamless shopping experience."
                   tags={["JavaScript", "MERN", "E-commerce"]}
-                  imageUrl="/placeholder.svg?height=250&width=500"
+                  imageUrl="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freevectors.net%2Fe-commerce-logo-36682&psig=AOvVaw0V8tDVMqw1Gijqjvkry3bE&ust=1745386572221000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMD7h-n16owDFQAAAAAdAAAAABAE"
                   githubUrl="https://github.com/callmeumair/E-Commerce"
                   liveUrl="https://ecom-web3.vercel.app/"
                   index={4}
@@ -245,7 +245,7 @@ export default function Home() {
                   title="Car Rental"
                   description="A car rental web application with booking system and vehicle management."
                   tags={["JavaScript", "MIT License"]}
-                  imageUrl="/placeholder.svg?height=250&width=500"
+                  imageUrl="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fcar-rental-logo&psig=AOvVaw1PUgfUpQqa5Z3BjFMRC3X6&ust=1745387492454000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMjig6D56owDFQAAAAAdAAAAABAm"
                   githubUrl="https://github.com/callmeumair/Car-rental"
                   liveUrl="https://car-web-orpin.vercel.app/"
                   index={5}
