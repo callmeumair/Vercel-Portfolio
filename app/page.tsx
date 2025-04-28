@@ -13,10 +13,37 @@ import ScrollProgress from "@/components/scroll-progress"
 import ScrollReveal from "@/components/scroll-reveal"
 
 export default function Home() {
+  // Skills array for the running animation
+  const skills = [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "SQL",
+    "Tailwind CSS",
+    "HTML/CSS",
+    "Git",
+    "Docker",
+    "AWS",
+    "GraphQL",
+    "Redux",
+    "Jest",
+    "Web3",
+    "Blockchain",
+    "Swift",
+    "Data Science",
+  ]
+
+  // Duplicate skills to create a seamless loop
+  const duplicatedSkills = [...skills, ...skills]
+
   return (
-    <div className="flex min-h-screen flex-col dark:bg-black">
+    <div className="flex min-h-screen flex-col bg-background text-foreground">
       <ScrollProgress />
-      <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-sm dark:bg-black/80 dark:border-gray-800">
+      <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-sm dark:border-gray-800">
         <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
@@ -74,7 +101,7 @@ export default function Home() {
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden dark:bg-black">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden">
           <AnimatedBackground />
           <div className="container px-4 md:px-6 relative z-10">
             <div className="flex flex-col items-center space-y-4 text-center">
@@ -85,7 +112,7 @@ export default function Home() {
                 />
                 <AnimatedText
                   text="BCA Student at SRM University & Full Stack Developer"
-                  className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400"
+                  className="mx-auto max-w-[700px] text-muted-foreground md:text-xl"
                   delay={0.5}
                 />
               </div>
@@ -118,7 +145,7 @@ export default function Home() {
               <AnimatedSection>
                 <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl gradient-text">About Me</h2>
-                  <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     I'm a passionate developer with experience building web applications and exploring emerging
                     technologies. Currently studying BCA at SRM University and building pulseffit.
                   </p>
@@ -141,10 +168,10 @@ export default function Home() {
                 <div className="flex flex-col justify-center space-y-4">
                   <ul className="grid gap-6">
                     <ScrollReveal direction="left">
-                      <li className="dark:card-glow dark:bg-gray-800/50 p-4 rounded-lg">
+                      <li className="dark-card p-4 rounded-lg">
                         <div className="grid gap-1">
                           <h3 className="text-xl font-bold">Background</h3>
-                          <p className="text-gray-500 dark:text-gray-400">
+                          <p className="text-muted-foreground">
                             BCA Student at SRM University with a focus on web technologies, data science, and emerging
                             tech like Web3.
                           </p>
@@ -152,10 +179,10 @@ export default function Home() {
                       </li>
                     </ScrollReveal>
                     <ScrollReveal direction="left">
-                      <li className="dark:card-glow dark:bg-gray-800/50 p-4 rounded-lg">
+                      <li className="dark-card p-4 rounded-lg">
                         <div className="grid gap-1">
                           <h3 className="text-xl font-bold">Experience</h3>
-                          <p className="text-gray-500 dark:text-gray-400">
+                          <p className="text-muted-foreground">
                             Developed various projects including e-commerce platforms, social media apps, and Web3
                             applications. Currently working at Ayan Construction.
                           </p>
@@ -163,10 +190,10 @@ export default function Home() {
                       </li>
                     </ScrollReveal>
                     <ScrollReveal direction="left">
-                      <li className="dark:card-glow dark:bg-gray-800/50 p-4 rounded-lg">
+                      <li className="dark-card p-4 rounded-lg">
                         <div className="grid gap-1">
                           <h3 className="text-xl font-bold">Achievements</h3>
-                          <p className="text-gray-500 dark:text-gray-400">
+                          <p className="text-muted-foreground">
                             Quickdraw achievement on GitHub. Pro member with 82 followers and active in open source
                             contributions.
                           </p>
@@ -186,7 +213,7 @@ export default function Home() {
               <AnimatedSection>
                 <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl gradient-text">My Projects</h2>
-                  <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     Here are some of my recent projects. Each one presented unique challenges and learning
                     opportunities.
                   </p>
@@ -194,7 +221,7 @@ export default function Home() {
               </AnimatedSection>
 
               {/* Featured Projects */}
-              <h3 className="text-2xl font-bold mt-8 mb-4">Featured Projects</h3>
+              <h3 className="text-2xl font-bold mt-8 mb-4 gradient-text">Featured Projects</h3>
               <div className="mx-auto grid max-w-6xl items-center gap-6 py-6 sm:grid-cols-2 lg:grid-cols-3">
                 <ProjectCard
                   title="PulseFit.AI"
@@ -209,7 +236,7 @@ export default function Home() {
                   title="Web3"
                   description="A Web3 project exploring blockchain technologies and decentralized applications."
                   tags={["TypeScript", "Web3", "Blockchain"]}
-                  imageUrl="https://www.google.com/imgres?q=web3%20dapps%20logo&imgurl=https%3A%2F%2Fchainstack.com%2Fwp-content%2Fuploads%2F2022%2F12%2Fweb3-dapps.png&imgrefurl=https%3A%2F%2Fchainstack.com%2Fdapps%2F&docid=HOjHHesIPgcP-M&tbnid=dSrk0ghyZEj8wM&vet=12ahUKEwjQr4ec9eqMAxXtxzgGHWxHD8EQM3oECBkQAA..i&w=2550&h=1350&hcb=2&ved=2ahUKEwjQr4ec9eqMAxXtxzgGHWxHD8EQM3oECBkQAA"
+                  imageUrl="https://images.unsplash.com/photo-1665597704311-d7304eaf70ac?q=80&w=2064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   githubUrl="https://github.com/callmeumair/web3"
                   liveUrl="https://web3-app1.vercel.app/"
                   index={1}
@@ -218,7 +245,7 @@ export default function Home() {
                   title="AI Agent"
                   description="An intelligent AI agent built with TypeScript for automated tasks and assistance."
                   tags={["TypeScript", "AI", "Automation"]}
-                  imageUrl="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Fwhat-heck-ai-agents-why-should-i-care-uma-gupta-7dbye&psig=AOvVaw3QYLN14faqW8rmyKaHGVhK&ust=1745386463177000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCJiYgLf16owDFQAAAAAdAAAAABAJ"
+                  imageUrl="https://plus.unsplash.com/premium_photo-1725985758251-b49c6b581d17?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   githubUrl="https://github.com/callmeumair/ai-agent"
                   liveUrl="https://ai-agent-6ucn.vercel.app/"
                   index={2}
@@ -227,7 +254,7 @@ export default function Home() {
                   title="Social Media App"
                   description="A full-stack social media platform that allows users to post updates, follow other users, and engage in real-time chat. Built using the MERN stack."
                   tags={["JavaScript", "MERN", "Real-time"]}
-                  imageUrl="https://www.google.com/url?sa=i&url=https%3A%2F%2Fdribbble.com%2Ftags%2Fsocial-media-logo&psig=AOvVaw3IReIdJvRErGJJWk10ic9M&ust=1745386522729000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMial9f16owDFQAAAAAdAAAAABAE"
+                  imageUrl="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=2148&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   githubUrl="https://github.com/callmeumair/Social-Media-App"
                   liveUrl="#"
                   index={3}
@@ -236,7 +263,7 @@ export default function Home() {
                   title="E-Commerce"
                   description="A full-stack e-commerce platform designed to showcase my skills as a Full Stack Web Developer. Includes user authentication, product management, and a seamless shopping experience."
                   tags={["JavaScript", "MERN", "E-commerce"]}
-                  imageUrl="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freevectors.net%2Fe-commerce-logo-36682&psig=AOvVaw0V8tDVMqw1Gijqjvkry3bE&ust=1745386572221000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMD7h-n16owDFQAAAAAdAAAAABAE"
+                  imageUrl="https://images.unsplash.com/photo-1657812159103-1b2a52a7f5e8?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   githubUrl="https://github.com/callmeumair/E-Commerce"
                   liveUrl="https://ecom-web3.vercel.app/"
                   index={4}
@@ -245,7 +272,7 @@ export default function Home() {
                   title="Car Rental"
                   description="A car rental web application with booking system and vehicle management."
                   tags={["JavaScript", "MIT License"]}
-                  imageUrl="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fcar-rental-logo&psig=AOvVaw1PUgfUpQqa5Z3BjFMRC3X6&ust=1745387492454000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMjig6D56owDFQAAAAAdAAAAABAm"
+                  imageUrl="https://images.unsplash.com/photo-1485463611174-f302f6a5c1c9?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   githubUrl="https://github.com/callmeumair/Car-rental"
                   liveUrl="https://car-web-orpin.vercel.app/"
                   index={5}
@@ -253,7 +280,7 @@ export default function Home() {
               </div>
 
               {/* Other Projects */}
-              <h3 className="text-2xl font-bold mt-12 mb-4">Other Projects</h3>
+              <h3 className="text-2xl font-bold mt-12 mb-4 gradient-text">Other Projects</h3>
               <div className="mx-auto grid max-w-6xl gap-4 py-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                 {[
                   { name: "Car Web", tech: "TypeScript", url: "https://github.com/callmeumair/car-web" },
@@ -302,7 +329,7 @@ export default function Home() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block p-4 rounded-lg border bg-card text-card-foreground shadow-sm hover:shadow-md transition-all duration-300 dark:card-glow dark:bg-gray-800/50 dark:border-gray-700 h-full"
+                      className="block p-4 rounded-lg border dark-card shadow-sm hover:shadow-md transition-all duration-300 h-full"
                     >
                       <h4 className="font-medium mb-2">{project.name}</h4>
                       <div className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary inline-block">
@@ -316,7 +343,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Skills & Technologies Section */}
+        {/* Skills & Technologies Section with Running Animation */}
         <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-muted/40 dark:bg-gray-900">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-8 text-center">
@@ -325,33 +352,19 @@ export default function Home() {
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl gradient-text">
                     Skills & Technologies
                   </h2>
-                  <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     These are the technologies and tools I work with on a regular basis.
                   </p>
                 </div>
               </AnimatedSection>
 
-              <div className="mx-auto grid max-w-5xl grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 py-8">
-                <SkillBadge name="JavaScript" index={0} />
-                <SkillBadge name="TypeScript" index={1} />
-                <SkillBadge name="React" index={2} />
-                <SkillBadge name="Next.js" index={3} />
-                <SkillBadge name="Node.js" index={4} />
-                <SkillBadge name="Express" index={5} />
-                <SkillBadge name="MongoDB" index={6} />
-                <SkillBadge name="SQL" index={7} />
-                <SkillBadge name="Tailwind CSS" index={8} />
-                <SkillBadge name="HTML/CSS" index={9} />
-                <SkillBadge name="Git" index={10} />
-                <SkillBadge name="Docker" index={11} />
-                <SkillBadge name="AWS" index={12} />
-                <SkillBadge name="GraphQL" index={13} />
-                <SkillBadge name="Redux" index={14} />
-                <SkillBadge name="Jest" index={15} />
-                <SkillBadge name="Web3" index={16} />
-                <SkillBadge name="Blockchain" index={17} />
-                <SkillBadge name="Swift" index={18} />
-                <SkillBadge name="Data Science" index={19} />
+              {/* Skills running animation */}
+              <div className="skills-container w-full py-8">
+                <div className="skills-track">
+                  {duplicatedSkills.map((skill, index) => (
+                    <SkillBadge key={index} name={skill} />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -364,7 +377,7 @@ export default function Home() {
               <AnimatedSection>
                 <div className="space-y-2">
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl gradient-text">Get In Touch</h2>
-                  <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     Have a project in mind or want to chat? Feel free to reach out!
                   </p>
                 </div>
@@ -373,13 +386,13 @@ export default function Home() {
               <div className="mx-auto grid max-w-5xl items-start gap-10 py-12 lg:grid-cols-2">
                 <div className="flex flex-col space-y-6">
                   <ScrollReveal direction="up">
-                    <div className="flex flex-col space-y-4 dark:card-glow dark:bg-gray-800/50 p-6 rounded-lg">
+                    <div className="flex flex-col space-y-4 dark-card p-6 rounded-lg">
                       <h3 className="text-xl font-bold">Contact Information</h3>
                       <div className="flex items-center space-x-3">
                         <Mail className="h-5 w-5 text-primary" />
                         <a
                           href="mailto:umerpatel1540@gmail.com"
-                          className="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
+                          className="text-muted-foreground hover:text-primary transition-colors"
                         >
                           umerpatel1540@gmail.com
                         </a>
@@ -390,7 +403,7 @@ export default function Home() {
                           href="https://linkedin.com/in/umerpatel"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
+                          className="text-muted-foreground hover:text-primary transition-colors"
                         >
                           linkedin.com/in/umerpatel
                         </a>
@@ -401,7 +414,7 @@ export default function Home() {
                           href="https://github.com/callmeumair"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
+                          className="text-muted-foreground hover:text-primary transition-colors"
                         >
                           github.com/callmeumair
                         </a>
@@ -412,7 +425,7 @@ export default function Home() {
                           href="https://twitter.com/Umerpatel11"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
+                          className="text-muted-foreground hover:text-primary transition-colors"
                         >
                           @Umerpatel11
                         </a>
@@ -422,7 +435,7 @@ export default function Home() {
                 </div>
 
                 <ScrollReveal direction="up" className="delay-100">
-                  <div className="dark:card-glow dark:bg-gray-800/50 p-6 rounded-lg">
+                  <div className="dark-card p-6 rounded-lg">
                     <ContactForm />
                   </div>
                 </ScrollReveal>
@@ -432,10 +445,10 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="w-full py-6 bg-muted/40 dark:bg-gray-900 border-t dark:border-gray-800">
+      <footer className="w-full py-6">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col items-center justify-center space-y-2 text-center">
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-sm text-muted-foreground dark:text-blue-300 footer-text">
               © {new Date().getFullYear()} Umer Patel. All rights reserved.
             </p>
             <div className="flex items-center space-x-4">
@@ -445,16 +458,16 @@ export default function Home() {
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="h-5 w-5 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" />
+                <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
               </a>
               <a href="https://github.com/callmeumair" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <Github className="h-5 w-5 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" />
+                <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
               </a>
               <a href="https://twitter.com/Umerpatel11" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter className="h-5 w-5 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" />
+                <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
               </a>
               <a href="mailto:umerpatel1540@gmail.com" aria-label="Email">
-                <Mail className="h-5 w-5 text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors" />
+                <Mail className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
               </a>
             </div>
           </div>

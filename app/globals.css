@@ -107,11 +107,11 @@ html {
 }
 
 /* Dark mode enhancements */
-.dark .card-glow {
+.card-glow {
   box-shadow: 0 0 15px 2px rgba(100, 100, 255, 0.1);
 }
 
-.dark .text-glow {
+.text-glow {
   text-shadow: 0 0 8px rgba(150, 150, 255, 0.3);
 }
 
@@ -122,6 +122,11 @@ html {
 
 .dark .gradient-text {
   @apply from-blue-400 to-purple-400;
+}
+
+/* Footer text in dark mode */
+.footer-text {
+  @apply text-blue-300;
 }
 
 /* Animation delay utilities */
@@ -137,9 +142,12 @@ html {
   animation-delay: 300ms;
 }
 
-/* Dark mode background */
-.dark body {
-  background-color: #000;
+/* Black background for all sections */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Mobile optimizations */
@@ -178,4 +186,66 @@ section {
   .card {
     width: 100%;
   }
+}
+
+/* Add this new CSS class for consistent dark mode section headings */
+.dark-section-heading {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400;
+}
+
+/* Skills running animation */
+.skills-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.skills-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.skills-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.skill-item {
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+/* Card styles for dark background */
+.dark-card {
+  @apply bg-white/90 border border-gray-200 rounded-lg shadow-sm;
+}
+
+.dark .dark-card {
+  @apply bg-gray-800/60 border-gray-700;
+}
+
+footer {
+  @apply bg-muted/40 border-t border-gray-200;
+}
+
+.dark footer {
+  @apply bg-black border-gray-800;
+}
+
+/* Add theme-specific styles for skills animation */
+.skills-track .skill-item {
+  @apply bg-white border-gray-200 text-gray-800;
+}
+
+.dark .skills-track .skill-item {
+  @apply bg-gray-900 border-gray-700 text-white;
 }
