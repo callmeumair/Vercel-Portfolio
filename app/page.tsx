@@ -120,7 +120,7 @@ export default function Home() {
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl gradient-text">About Me</h2>
                   <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                     I'm a passionate developer with experience building web applications and exploring emerging
-                    technologies. Currently studying BCA at SRM University and working at Ayan Construction.
+                    technologies. Currently studying BCA at SRM University and building pulseffit.
                   </p>
                 </div>
               </AnimatedSection>
