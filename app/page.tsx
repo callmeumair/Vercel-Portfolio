@@ -8,7 +8,6 @@ import ContactForm from "@/components/contact-form"
 import AnimatedBackground from "@/components/animated-background"
 import AnimatedSection from "@/components/animated-section"
 import AnimatedText from "@/components/animated-text"
-import { ThemeToggle } from "@/components/theme-toggle"
 import ScrollProgress from "@/components/scroll-progress"
 import ScrollReveal from "@/components/scroll-reveal"
 
@@ -43,11 +42,11 @@ export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-background text-foreground">
       <ScrollProgress />
-      <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-sm dark:border-gray-800">
+      <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur-sm">
         <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="inline-block font-bold text-lg dark:text-glow">Umer Patel</span>
+              <span className="inline-block font-bold text-lg">Umer Patel</span>
             </Link>
           </div>
           <div className="flex items-center">
@@ -96,12 +95,11 @@ export default function Home() {
                 Contact
               </Link>
             </div>
-            <ThemeToggle />
           </div>
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative overflow-hidden hero-section">
           <AnimatedBackground />
           <div className="container px-4 md:px-6 relative z-10">
             <div className="flex flex-col items-center space-y-4 text-center">
@@ -119,12 +117,11 @@ export default function Home() {
               <AnimatedSection delay={0.8}>
                 <div className="flex flex-wrap justify-center gap-4 mt-4">
                   <Link href="#contact">
-                    <Button className="px-8 relative overflow-hidden group dark:bg-blue-600 dark:hover:bg-blue-700">
-                      <span className="relative z-10 flex items-center">
+                    <Button className="px-8 hover-button bg-blue-600 hover:bg-blue-700">
+                      <span className="flex items-center">
                         Contact Me
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </span>
-                      <span className="absolute inset-0 bg-primary-foreground z-0 translate-y-[101%] group-hover:translate-y-0 transition-transform duration-300 dark:bg-blue-800"></span>
                     </Button>
                   </Link>
                 </div>
@@ -139,7 +136,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/40 dark:bg-gray-900">
+        <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <AnimatedSection>
@@ -168,7 +165,7 @@ export default function Home() {
                 <div className="flex flex-col justify-center space-y-4">
                   <ul className="grid gap-6">
                     <ScrollReveal direction="left">
-                      <li className="dark-card p-4 rounded-lg">
+                      <li className="custom-card p-4 rounded-lg">
                         <div className="grid gap-1">
                           <h3 className="text-xl font-bold">Background</h3>
                           <p className="text-muted-foreground">
@@ -179,7 +176,7 @@ export default function Home() {
                       </li>
                     </ScrollReveal>
                     <ScrollReveal direction="left">
-                      <li className="dark-card p-4 rounded-lg">
+                      <li className="custom-card p-4 rounded-lg">
                         <div className="grid gap-1">
                           <h3 className="text-xl font-bold">Experience</h3>
                           <p className="text-muted-foreground">
@@ -190,7 +187,7 @@ export default function Home() {
                       </li>
                     </ScrollReveal>
                     <ScrollReveal direction="left">
-                      <li className="dark-card p-4 rounded-lg">
+                      <li className="custom-card p-4 rounded-lg">
                         <div className="grid gap-1">
                           <h3 className="text-xl font-bold">Achievements</h3>
                           <p className="text-muted-foreground">
@@ -207,7 +204,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="w-full py-12 md:py-24 lg:py-32 dark:bg-black">
+        <section id="projects" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <AnimatedSection>
@@ -329,7 +326,7 @@ export default function Home() {
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block p-4 rounded-lg border dark-card shadow-sm hover:shadow-md transition-all duration-300 h-full"
+                      className="block p-4 rounded-lg border custom-card shadow-sm hover:shadow-md transition-all duration-300 h-full"
                     >
                       <h4 className="font-medium mb-2">{project.name}</h4>
                       <div className="text-xs px-2 py-1 rounded-full bg-primary/10 text-primary inline-block">
@@ -344,7 +341,7 @@ export default function Home() {
         </section>
 
         {/* Skills & Technologies Section with Running Animation */}
-        <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-muted/40 dark:bg-gray-900">
+        <section id="skills" className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-8 text-center">
               <AnimatedSection>
@@ -371,7 +368,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="w-full py-12 md:py-24 lg:py-32 dark:bg-black">
+        <section id="contact" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <AnimatedSection>
@@ -386,7 +383,7 @@ export default function Home() {
               <div className="mx-auto grid max-w-5xl items-start gap-10 py-12 lg:grid-cols-2">
                 <div className="flex flex-col space-y-6">
                   <ScrollReveal direction="up">
-                    <div className="flex flex-col space-y-4 dark-card p-6 rounded-lg">
+                    <div className="flex flex-col space-y-4 custom-card p-6 rounded-lg">
                       <h3 className="text-xl font-bold">Contact Information</h3>
                       <div className="flex items-center space-x-3">
                         <Mail className="h-5 w-5 text-primary" />
@@ -435,7 +432,7 @@ export default function Home() {
                 </div>
 
                 <ScrollReveal direction="up" className="delay-100">
-                  <div className="dark-card p-6 rounded-lg">
+                  <div className="custom-card p-6 rounded-lg">
                     <ContactForm />
                   </div>
                 </ScrollReveal>
@@ -448,7 +445,7 @@ export default function Home() {
       <footer className="w-full py-6">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="flex flex-col items-center justify-center space-y-2 text-center">
-            <p className="text-sm text-muted-foreground dark:text-blue-300 footer-text">
+            <p className="text-sm text-muted-foreground">
               © {new Date().getFullYear()} Umer Patel. All rights reserved.
             </p>
             <div className="flex items-center space-x-4">
