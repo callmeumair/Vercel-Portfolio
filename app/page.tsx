@@ -105,7 +105,7 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <AnimatedText
-                  text="Hi, I'm Umer"
+                  text="Hi, I'm  Umer"
                   className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none gradient-text"
                 />
                 <AnimatedText
