@@ -181,7 +181,7 @@ export default function Home() {
                           <h3 className="text-xl font-bold">Experience</h3>
                           <p className="text-muted-foreground">
                             Developed various projects including e-commerce platforms, social media apps, and Web3
-                            applications. Currently working at Ayan Construction.
+                            applications. Currently working at Pulseffit.
                           </p>
                         </div>
                       </li>
